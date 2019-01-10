@@ -8,5 +8,19 @@
         android:id="@+id/specialities_fragment"
         android:name="ru.evapps.testtask.ui.fragments.SpecialitiesFragment"
         android:label="@string/specialities_title"
-        tools:layout="@layout/fragment_specialities" />
+        tools:layout="@layout/fragment_specialities">
+        <action
+            android:id="@+id/navigate_to_employees"
+            app:destination="@id/employees_fragment"
+            app:enterAnim="@anim/slide_to_left_swift"
+            app:exitAnim="@anim/slide_to_left_slow"
+            app:popEnterAnim="@anim/slide_to_right_slow"
+            app:popExitAnim="@anim/slide_to_right_swift" />
+    </fragment>
+    <fragment
+        android:id="@+id/employees_fragment"
+        android:name="ru.evapps.testtask.ui.fragments.EmployeesFragment"
+        android:label="@string/employees_title"
+        tools:layout="@layout/fragment_employees">
+    </fragment>
 </navigation>

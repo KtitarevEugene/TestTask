@@ -15,8 +15,13 @@ import java.util.List;
 
 public abstract class BaseRecyclerViewAdapter<ItemType, ViewHolderType extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<ViewHolderType> {
 
+    public interface OnItemClickListener<T> {
+        void onItemClick(T item, int position);
+    }
+
     protected List<ItemType> items;
     protected Context context;
+    protected OnItemClickListener<ItemType> listener;
 
     public BaseRecyclerViewAdapter(Context context, List<ItemType> items) {
         this.context = context;
@@ -31,6 +36,10 @@ public abstract class BaseRecyclerViewAdapter<ItemType, ViewHolderType extends R
         this.items = items;
 
         notifyDataSetChanged();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener<ItemType> listener) {
+        this.listener = listener;
     }
 
     @NonNull

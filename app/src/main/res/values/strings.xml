@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">TestTask</string>
     <string name="specialities_title">Специальности</string>
+    <string name="employees_title">Сотрудники</string>
     <string name="error_load_specialities">Не удалось загрузить список специальностей</string>
+    <string name="error_load_employees">Не удалось загрузить список сотрудников</string>
+    <string name="first_last_names">%1$s %2$s</string>
+    <string name="empty_birthday">-</string>
+
+    <string name="year1">%d год</string>
+    <string name="year">%d года</string>
+    <string name="years">%d лет</string>
 </resources>

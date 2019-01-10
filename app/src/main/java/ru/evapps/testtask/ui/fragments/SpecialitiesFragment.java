@@ -20,12 +20,14 @@ import com.arellomobile.mvp.presenter.ProvidePresenter;
 
 import java.util.List;
 
+import androidx.navigation.fragment.NavHostFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ru.evapps.testtask.R;
 import ru.evapps.testtask.db.entities.SpecialityEntity;
 import ru.evapps.testtask.mvp.presenters.SpecialitiesPresenter;
 import ru.evapps.testtask.mvp.views.SpecialitiesView;
+import ru.evapps.testtask.ui.adapters.BaseRecyclerViewAdapter;
 import ru.evapps.testtask.ui.adapters.SpecialitiesAdapter;
 
 /**
@@ -33,7 +35,7 @@ import ru.evapps.testtask.ui.adapters.SpecialitiesAdapter;
  *
  */
 
-public class SpecialitiesFragment extends MvpAppCompatFragment implements SpecialitiesView {
+public class SpecialitiesFragment extends MvpAppCompatFragment implements SpecialitiesView, BaseRecyclerViewAdapter.OnItemClickListener<SpecialityEntity> {
 
     @InjectPresenter
     SpecialitiesPresenter presenter;
@@ -62,7 +64,9 @@ public class SpecialitiesFragment extends MvpAppCompatFragment implements Specia
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_specialities, container, false);
         ButterKnife.bind(this, view);
+
         prepareRecyclerView();
+
         return view;
 
     }
@@ -79,6 +83,7 @@ public class SpecialitiesFragment extends MvpAppCompatFragment implements Specia
         specialitiesList.addItemDecoration(itemDecoration);
 
         SpecialitiesAdapter adapter = new SpecialitiesAdapter(getActivity());
+        adapter.setOnItemClickListener(this);
         specialitiesList.setAdapter(adapter);
     }
 
@@ -100,5 +105,15 @@ public class SpecialitiesFragment extends MvpAppCompatFragment implements Specia
             SpecialitiesAdapter specialitiesAdapter = (SpecialitiesAdapter) adapter;
             specialitiesAdapter.setItems(specialities);
         }
+    }
+
+    @Override
+    public void navigateToEmployeesList(Bundle args) {
+        NavHostFragment.findNavController(this).navigate(R.id.navigate_to_employees, args);
+    }
+
+    @Override
+    public void onItemClick(SpecialityEntity item, int position) {
+        presenter.showEmployees(item, position);
     }
 }

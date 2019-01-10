@@ -53,5 +53,10 @@ public class SpecialitiesAdapter extends BaseRecyclerViewAdapter<SpecialityEntit
         SpecialityEntity currentEntity = items.get(viewHolder.getAdapterPosition());
 
         viewHolder.specialityName.setText(currentEntity.getName());
+        viewHolder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(items.get(viewHolder.getAdapterPosition()), viewHolder.getAdapterPosition());
+            }
+        });
     }
 }

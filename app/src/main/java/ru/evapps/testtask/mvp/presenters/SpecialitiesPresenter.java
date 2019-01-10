@@ -1,6 +1,7 @@
 package ru.evapps.testtask.mvp.presenters;
 
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.util.Log;
 
 import com.arellomobile.mvp.InjectViewState;
@@ -48,7 +49,12 @@ public class SpecialitiesPresenter extends BasePresenter<SpecialitiesView> {
     protected void onFirstViewAttach() {
         super.onFirstViewAttach();
         loadData();
+    }
 
+    public void showEmployees(SpecialityEntity item, int position) {
+        Bundle args = new Bundle();
+        args.putLong(Constants.SPECIALITY_ID, item.getId());
+        getViewState().navigateToEmployeesList(args);
     }
 
     private void loadData() {

@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by ektitarev on 10/01/2019.
+ *
  */
 
 public class SpecialityModel {

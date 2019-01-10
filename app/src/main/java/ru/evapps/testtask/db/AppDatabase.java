@@ -12,6 +12,7 @@ import ru.evapps.testtask.db.entities.SpecialityEntity;
 
 /**
  * Created by ektitarev on 09/01/2019.
+ *
  */
 
 @Database(version = 1, entities = {EmployeeEntity.class, SpecialityEntity.class, EmployeeSpecialityJoinEntity.class}, exportSchema = false)

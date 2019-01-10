@@ -14,10 +14,31 @@
         <item name="actionMenuTextColor">@android:color/white</item>
     </style>
 
-    <style name="list_item_text_style">
-        <item name="android:layout_margin">@dimen/list_item_text_margin</item>
+    <style name="list_item_text_style_base">
         <item name="android:textColor">@color/list_item_text</item>
         <item name="android:textSize">@dimen/list_item_text_size</item>
+    </style>
+
+    <style name="list_item_text_style" parent="list_item_text_style_base">
+        <item name="android:layout_margin">@dimen/list_item_text_margin</item>
+    </style>
+
+    <style name="employee_list_item_text_style" parent="list_item_text_style_base">
+        <item name="android:layout_marginTop">@dimen/list_item_text_margin</item>
+        <item name="android:layout_marginStart">@dimen/list_item_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/list_item_text_margin</item>
+        <item name="android:layout_marginBottom">@dimen/list_item_text_margin_bottom</item>
+    </style>
+
+    <style name="list_item_subtext_style_base">
+        <item name="android:textColor">@color/list_item_subtext</item>
+        <item name="android:textSize">@dimen/list_item_subtext_size</item>
+    </style>
+
+    <style name="employee_list_item_subtext_style" parent="list_item_subtext_style_base">
+        <item name="android:layout_marginStart">@dimen/list_item_text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/list_item_text_margin</item>
+        <item name="android:layout_marginBottom">@dimen/list_item_text_margin</item>
     </style>
 
 </resources>
