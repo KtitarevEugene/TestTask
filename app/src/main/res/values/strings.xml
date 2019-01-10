@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TestTask</string>
     <string name="specialities_title">Специальности</string>
+    <string name="error_load_specialities">Не удалось загрузить список специальностей</string>
 </resources>

@@ -25,5 +25,5 @@ public interface SpecialitiesDao {
     Single<SpecialityEntity> getSpecialityById(int id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(SpecialityEntity... model);
+    List<Long> insert(SpecialityEntity... model);
 }

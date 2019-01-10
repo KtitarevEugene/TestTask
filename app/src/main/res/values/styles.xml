@@ -14,4 +14,10 @@
         <item name="actionMenuTextColor">@android:color/white</item>
     </style>
 
+    <style name="list_item_text_style">
+        <item name="android:layout_margin">@dimen/list_item_text_margin</item>
+        <item name="android:textColor">@color/list_item_text</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+    </style>
+
 </resources>

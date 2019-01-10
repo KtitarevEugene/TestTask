@@ -20,7 +20,7 @@ import ru.evapps.testtask.api.Api;
 @Module
 public class ApiModule {
 
-    private static final String BASE_URL = "http://gitlab.65apps.com/65gb/static/raw/master";
+    private static final String BASE_URL = "http://gitlab.65apps.com/";
 
     @Provides
     @Singleton

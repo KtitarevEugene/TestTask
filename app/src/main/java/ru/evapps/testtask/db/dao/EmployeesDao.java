@@ -25,5 +25,5 @@ public interface EmployeesDao {
     Single<EmployeeEntity> getEmployeeById (int id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert (EmployeeEntity... model);
+    List<Long> insert (EmployeeEntity... model);
 }
