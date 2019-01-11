@@ -41,4 +41,14 @@
         <item name="android:layout_marginBottom">@dimen/list_item_text_margin</item>
     </style>
 
+    <style name="details_first_last_name_style">
+        <item name="android:textColor">@color/details_first_last_name</item>
+        <item name="android:textSize">@dimen/details_first_last_name_size</item>
+    </style>
+
+    <style name="details_birtday_age_style">
+        <item name="android:textColor">@color/details_first_last_name</item>
+        <item name="android:textSize">@dimen/details_birthday_size</item>
+    </style>
+
 </resources>

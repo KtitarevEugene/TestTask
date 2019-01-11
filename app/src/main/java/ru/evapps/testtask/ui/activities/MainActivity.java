@@ -45,6 +45,16 @@ public class MainActivity extends MvpAppCompatActivity {
     @Override
     public void onBackPressed() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        navController.popBackStack();
+        NavDestination destination = navController.getCurrentDestination();
+        if (destination != null) {
+            switch (destination.getId()) {
+                case R.id.employees_fragment:
+                case R.id.employee_details_fragment:
+                    navController.popBackStack();
+                    break;
+                default:
+                    finish();
+            }
+        }
     }
 }

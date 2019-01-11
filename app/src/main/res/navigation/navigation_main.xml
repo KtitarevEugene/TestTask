@@ -22,5 +22,17 @@
         android:name="ru.evapps.testtask.ui.fragments.EmployeesFragment"
         android:label="@string/employees_title"
         tools:layout="@layout/fragment_employees">
+        <action
+            android:id="@+id/navigate_to_employee_details"
+            app:destination="@id/employee_details_fragment"
+            app:enterAnim="@anim/slide_to_left_swift"
+            app:exitAnim="@anim/slide_to_left_slow"
+            app:popEnterAnim="@anim/slide_to_right_slow"
+            app:popExitAnim="@anim/slide_to_right_swift" />
     </fragment>
+    <fragment
+        android:id="@+id/employee_details_fragment"
+        android:name="ru.evapps.testtask.ui.fragments.EmployeeDetailsFragment"
+        android:label="@string/employees_title"
+        tools:layout="@layout/fragment_employees" />
 </navigation>

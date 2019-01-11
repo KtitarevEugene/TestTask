@@ -4,4 +4,10 @@
     <dimen name="list_item_text_margin_bottom">5dp</dimen>
     <dimen name="list_item_text_size">16sp</dimen>
     <dimen name="list_item_subtext_size">12sp</dimen>
+    <dimen name="details_fragment_paddings">16dp</dimen>
+
+    <dimen name="details_main_margin">15dp</dimen>
+    <dimen name="details_first_last_name_size">24sp</dimen>
+    <dimen name="details_birthday_size">16sp</dimen>
+    <dimen name="details_age_size">16sp</dimen>
 </resources>

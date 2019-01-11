@@ -4,8 +4,16 @@
     <string name="employees_title">Сотрудники</string>
     <string name="error_load_specialities">Не удалось загрузить список специальностей</string>
     <string name="error_load_employees">Не удалось загрузить список сотрудников</string>
+    <string name="error_load_employee_details">Не удалось загрузить данные о сотруднике</string>
     <string name="first_last_names">%1$s %2$s</string>
     <string name="empty_birthday">-</string>
+
+    <string name="birthday_format">"Дата рождения: dd.MM.yyyy г."</string>
+    <string name="empty_birthday_format">"Дата рождения: -"</string>
+    <string name="age_format">"Возраст: %s"</string>
+    <string name="empty_age_format">"Возраст: -"</string>
+    <string name="employee_speciality">Специальность: %s</string>
+    <string name="employee_specialities">Специальности: %s</string>
 
     <string name="year1">%d год</string>
     <string name="year">%d года</string>

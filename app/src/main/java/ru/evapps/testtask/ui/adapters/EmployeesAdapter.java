@@ -68,5 +68,11 @@ public class EmployeesAdapter extends BaseRecyclerViewAdapter<EmployeeEntity, Em
         } else {
             viewHolder.employeeAge.setText(R.string.empty_birthday);
         }
+
+        viewHolder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(items.get(viewHolder.getAdapterPosition()), viewHolder.getAdapterPosition());
+            }
+        });
     }
 }

@@ -7,5 +7,6 @@
     <color name="recycler_view_divider_color">#aaaaaa</color>
 
     <color name="list_item_text">@android:color/black</color>
+    <color name="details_first_last_name">@color/list_item_text</color>
     <color name="list_item_subtext">#555555</color>
 </resources>

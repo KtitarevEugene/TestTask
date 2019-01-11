@@ -9,4 +9,5 @@ public class Constants {
     public static final String IS_DATA_LOADED = "IS_DATA_LOADED";
 
     public static final String SPECIALITY_ID = "SPECIALITY_ID";
+    public static final String EMPLOYEE_ID = "SPECIALITY_ID";
 }

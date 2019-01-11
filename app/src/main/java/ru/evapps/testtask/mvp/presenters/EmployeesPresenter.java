@@ -8,6 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import ru.evapps.testtask.App;
 import ru.evapps.testtask.common.Constants;
+import ru.evapps.testtask.db.entities.EmployeeEntity;
 import ru.evapps.testtask.mvp.views.EmployeesView;
 
 /**
@@ -48,5 +49,12 @@ public class EmployeesPresenter extends BasePresenter<EmployeesView> {
                         getViewState().showErrorMessage();
                     });
         }
+    }
+
+    public void showEmployeeDetails(EmployeeEntity employee, int position) {
+        Bundle args = new Bundle();
+        args.putLong(Constants.EMPLOYEE_ID, employee.getId());
+
+        getViewState().navigateToEmployeeDetails(args);
     }
 }

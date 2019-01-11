@@ -26,6 +26,7 @@ import ru.evapps.testtask.R;
 import ru.evapps.testtask.db.entities.EmployeeEntity;
 import ru.evapps.testtask.mvp.presenters.EmployeesPresenter;
 import ru.evapps.testtask.mvp.views.EmployeesView;
+import ru.evapps.testtask.ui.adapters.BaseRecyclerViewAdapter;
 import ru.evapps.testtask.ui.adapters.EmployeesAdapter;
 
 /**
@@ -33,7 +34,7 @@ import ru.evapps.testtask.ui.adapters.EmployeesAdapter;
  *
  */
 
-public class EmployeesFragment extends MvpAppCompatFragment implements EmployeesView {
+public class EmployeesFragment extends MvpAppCompatFragment implements EmployeesView, BaseRecyclerViewAdapter.OnItemClickListener<EmployeeEntity> {
 
     @BindView(R.id.root_container)
     View rootContainer;
@@ -81,6 +82,7 @@ public class EmployeesFragment extends MvpAppCompatFragment implements Employees
         employeesList.addItemDecoration(itemDecoration);
 
         EmployeesAdapter adapter = new EmployeesAdapter(getActivity());
+        adapter.setOnItemClickListener(this);
         employeesList.setAdapter(adapter);
     }
 
@@ -112,5 +114,15 @@ public class EmployeesFragment extends MvpAppCompatFragment implements Employees
             EmployeesAdapter employeesAdapter = (EmployeesAdapter) adapter;
             employeesAdapter.setItems(employees);
         }
+    }
+
+    @Override
+    public void navigateToEmployeeDetails(Bundle args) {
+        NavHostFragment.findNavController(this).navigate(R.id.navigate_to_employee_details, args);
+    }
+
+    @Override
+    public void onItemClick(EmployeeEntity item, int position) {
+        presenter.showEmployeeDetails(item, position);
     }
 }

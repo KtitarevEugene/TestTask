@@ -22,7 +22,7 @@ public interface EmployeesDao {
     Single<List<EmployeeEntity>> getAllEmployees();
 
     @Query("select * from Employees where id = :id")
-    Single<EmployeeEntity> getEmployeeById (int id);
+    Single<EmployeeEntity> getEmployeeById (long id);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     List<Long> insert (EmployeeEntity... model);

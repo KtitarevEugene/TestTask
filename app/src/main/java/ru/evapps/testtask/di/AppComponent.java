@@ -6,6 +6,7 @@ import dagger.Component;
 import ru.evapps.testtask.di.modules.ApiModule;
 import ru.evapps.testtask.di.modules.ContextModule;
 import ru.evapps.testtask.di.modules.DatabaseModule;
+import ru.evapps.testtask.mvp.presenters.EmployeeDetailsPresenter;
 import ru.evapps.testtask.mvp.presenters.EmployeesPresenter;
 import ru.evapps.testtask.mvp.presenters.SpecialitiesPresenter;
 
@@ -20,4 +21,5 @@ public interface AppComponent {
 
     void provideDependency(SpecialitiesPresenter presenter);
     void provideDependency(EmployeesPresenter presenter);
+    void provideDependency(EmployeeDetailsPresenter presenter);
 }
